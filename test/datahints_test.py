@@ -65,3 +65,7 @@ class DataFrameTestCase(TestCase):
         self.assertEqual(A.col1, "col1")
         self.assertEqual(B.col2, "col2")
         self.assertRaises(AttributeError, lambda: A.col3)
+
+        with self.assertWarns(UserWarning):
+            class Foo(DataFrame):
+                merge: Series

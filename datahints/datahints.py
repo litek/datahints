@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from inspect import isclass
 from datetime import date
+from warnings import warn
 
 T = typing.TypeVar("T")
 
@@ -121,6 +122,9 @@ class DataFrameMeta(type):
         for key, tp in cls.__annotations__.items():
             if DataType.is_series(tp):
                 cls.__dtypes[key] = DataType(tp)
+
+                if hasattr(pd.DataFrame, key):
+                    warn(f"Column '{key}' on '{name}' conflicts with built-in pandas DataFrame method or attribute")
 
     def get_type_hints(cls) -> typing.Dict[str, DataType]:
         """

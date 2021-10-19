@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "datahints"
-version = "0.1.0"
+version = "0.1.1"
 description = "Type hinting for pandas DataFrame"
 authors = ["Ketil Albertsen"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/litek/datahints"
+repository = "https://github.com/litek/datahints"
 
 [tool.poetry.dependencies]
 python = "^3.9"
