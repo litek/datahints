@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "datahints"
+version = "0.1.0"
+description = "Type hinting for pandas DataFrame"
+authors = ["Ketil Albertsen"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pandas = "^1.3.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
