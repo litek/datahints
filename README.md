@@ -29,7 +29,8 @@ MyDataFrame.validate(df)
 # validate and annotate type for IDE support
 df = MyDataFrame.validate(df)
 
-# use statically named columns 
+# use statically named columns
+df.col1 = [7, 8]
 df[MyDataFrame.col3] = [5.0, 6.0]
 
 # constructor simply returns a dataframe instance
