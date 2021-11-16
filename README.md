@@ -21,6 +21,7 @@ class MyDataFrame(DataFrame):
     col1: Series[int]
     col2: Series[Union[int, float]]
     col3: Optional[Series[np.float64]]
+    col4: Series  # Series or pd.Series evaluates as Series[Any]
 
 # validate any dataframe
 df = pd.DataFrame({"col1": [1, 2], "col2": [3.0, 4.0]})
